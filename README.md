@@ -1,8 +1,5 @@
 # Rate-Distortion Optimization with Spark + FFmpeg
 
-Spark notebooks explore video rate-distortion optimization using content info.
-
-## Intro
 Streaming video efficiently relies on encoding at multiple resolution/bitrates to accomodate network conditions by switching adaptively.
 <img src="https://smellslike.ml/img/adaptive_bitrate_streaming.png#center" width=800>
 
