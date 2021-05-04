@@ -13,7 +13,7 @@ Streaming video efficiently relies on encoding at multiple resolution/bitrates t
 
 Video engineers search a grid of bitrate/resolution to maximize percieved quality using a metric like [VMAF](https://github.com/Netflix/vmaf) via Convex Hull optimization.
 
-<img src="https://smellslike.ml/img/shot_level_optimization.png#center" >
+<img src="https://smellslike.ml/img/shot_level_optimization.png#center" width=800>
 
 However, naive grid search is wasteful.
 
