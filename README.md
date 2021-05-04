@@ -10,16 +10,18 @@ Video engineers search a grid of bitrate/resolution to maximize percieved qualit
 
 <img src="https://smellslike.ml/img/shot_level_optimization.png#center" width=800>
 
-However, naive grid search is wasteful.
+This search is expensive but worth the cost for video streamed over and over to many devices.
 
 <img src="https://smellslike.ml/img/bitrate_ladder_1.png#center" width=800>
 
-We are most interested in points near the Pareto Frontier.
+Extrapolating from fewer computations helps but we are most interested in points near the Pareto Frontier.
 
 <img src="https://smellslike.ml/img/bitrate_ladder_2.png#center" width=800>
 
+We explore ideas presented by [Netflix](https://arxiv.org/pdf/2103.07564.pdf) to segment video at the shot-level and combine interpolation with content-based regression to reduce the search further. 
+
 ## Getting Started
-The notebooks in the ```notebooks/``` directory explore ideas from [Netflix](https://arxiv.org/pdf/2103.07564.pdf) to segment video at the shot-level and combining interpolation with content-based regression to reduce the search further. If you are using the Databricks platform, you can import the notebooks from these links:
+The notebooks in the ```notebooks/``` directory are available to Databricks users at these links:
 
 * [Part I](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1969271421694072/827948633476116/5612335034456173/latest.html)
 * [Part II](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1969271421694072/4057322776779238/5612335034456173/latest.html)
