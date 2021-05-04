@@ -2,24 +2,24 @@
 
 Spark notebooks explore video rate-distortion optimization using content info.
 
-Resources:
+### Resources:
 * [Netflix Paper](https://arxiv.org/pdf/2103.07564.pdf)
 * [Bitrate Optimization using Spark and FFmpeg](https://smellslike.ml/posts/bitrate-optimization-using-spark-and-ffmpeg/)
 * [Toward A Practical Perceptual Video Quality Metric](https://netflixtechblog.com/toward-a-practical-perceptual-video-quality-metric-653f208b9652)
 * [Introducing VMAF percentiles for video quality measurements](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2020/introducing-vmaf-percentiles-for-video-quality-measurements.html)
 
-Efficient video streaming relies on adaptive bitrates
-![ABR](https://smellslike.ml/img/adaptive_bitrate_streaming.png#center)
+Streaming video efficiently relies on encoding at multiple resolution/bitrates to accomodate network conditions by switching adaptively.
+<img src="https://smellslike.ml/img/adaptive_bitrate_streaming.png#center" width=500>
 
-Video engineers use grid search to optimize percieved quality subject to constrains on bitrate/resolution.
+Video engineers search a grid of bitrate/resolution to maximize percieved quality using a metric like [VMAF](https://github.com/Netflix/vmaf) via Convex Hull optimization.
 
 ![RD-curve](https://smellslike.ml/img/shot_level_optimization.png#center)
 
-But a naive search can be wasteful
+However, naive grid search is wasteful.
 
 ![naive search](https://smellslike.ml/img/bitrate_ladder_1.png#center)
 
-When we are really interested in points near the Pareto Frontier
+We are most interested in points near the Pareto Frontier.
 
 ![PF](https://smellslike.ml/img/bitrate_ladder_2.png#center)
 
