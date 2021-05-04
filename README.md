@@ -1,6 +1,6 @@
 # Rate-Distortion Optimization with Spark + FFmpeg
 
-A series of Spark notebooks outlining video rate-distortion optimization by regressing from content info, similar to [Netflix](https://arxiv.org/pdf/2103.07564.pdf).
+Spark notebooks outlining video rate-distortion optimization using content info, inpspired by [Netflix](https://arxiv.org/pdf/2103.07564.pdf).
 
 Resources:
 * [Paper](https://arxiv.org/pdf/2103.07564.pdf)
